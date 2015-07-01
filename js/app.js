@@ -21,23 +21,29 @@ require(['angular','angularRoute'], function (angular) {
         
     var mainApp = angular.module('mainApp', ['ngRoute']);
     
+    mainApp.controller('ctrl1', ['$scope' , function ($scope){
+    	$scope.name = 'Hello';
+    }]);
+    
+    mainApp.controller('ctrl2', ['$scope' , function ($scope){
+    	$scope.name = 'Hello';
+    }]);
+    
     mainApp.config(['$routeProvider',function($routeProvider) {
         $routeProvider.
         when('/view1', {
             templateUrl: 'tpl/view1.html',
-            //controller: 'ctrl1'
+            controller: 'ctrl1'
         }).
         when('/view2', {
             templateUrl: 'tpl/view2.html',
-            //controller: 'ctrl2'
+            controller: 'ctrl2'
         }).
         otherwise({
             redirectTo: '/'
         });
     }]);
     
-    require(['domReady!'], function (document) {
-        angular.bootstrap(document, ['mainApp']);
-    });
+    angular.bootstrap(document, ['mainApp']);
 
 });
