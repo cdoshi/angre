@@ -11,7 +11,7 @@ require.config({
             exports : 'angular'
         },
         angularAMD : {
-            exports : 'angular'
+            exports : 'angularAMD'
         },
         angularRoute : ['angular']
     },
