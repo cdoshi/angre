@@ -13,8 +13,10 @@ define(['app'], function(app) {
             $scope.alerts.splice(index, 1);
         };
         $scope.addAlert = function() {
-    $scope.alerts.push({msg: 'Another alert!'});
-  };
+            $scope.alerts.push({
+                msg : 'Another alert!'
+            });
+        };
 
     }]);
 });

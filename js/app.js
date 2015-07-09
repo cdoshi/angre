@@ -1,4 +1,4 @@
-define(['angular', 'angularRoute', 'angularAMD', 'bootstrap','bootstraptpl'], function(angular, ngRoute, angularAMD) {
+define(['angular', 'angularRoute', 'angularAMD', 'bootstrap', 'bootstraptpl'], function(angular, ngRoute, angularAMD) {
     "use strict";
 
     var app = angular.module('mainApp', ['ui.bootstrap', 'ngRoute']);
