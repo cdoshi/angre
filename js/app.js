@@ -1,16 +1,7 @@
-define(['angular', 'angularRoute', 'angularAMD','bootstrap'], function(angular, ngRoute, angularAMD) {
+define(['angular', 'angularRoute', 'angularAMD', 'bootstrap','bootstraptpl'], function(angular, ngRoute, angularAMD) {
     "use strict";
 
-    var app = angular.module('mainApp', ['ui.bootstrap','ngRoute']);
-    
-    app.controller('DropdownCtrl', function($scope) {
- 
-    $scope.items = [
-        "The first choice!",
-        "And another choice for you.",
-        "but wait! A third!"
-    ];
-});
+    var app = angular.module('mainApp', ['ui.bootstrap', 'ngRoute']);
 
     app.config(['$routeProvider',
     function($routeProvider) {
@@ -30,4 +21,4 @@ define(['angular', 'angularRoute', 'angularAMD','bootstrap'], function(angular, 
 
     return angularAMD.bootstrap(app);
 
-}); 
+});
